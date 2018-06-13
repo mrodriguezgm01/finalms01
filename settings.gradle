@@ -1,0 +1,7 @@
+
+include 'registry'
+include 'productCatalogService'
+include 'customerService'
+include 'gateway'
+
+rootProject.name = 'dia18'
