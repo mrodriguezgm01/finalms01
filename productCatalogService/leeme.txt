@@ -1,0 +1,18 @@
+Se generó la funcionalidad que pidió el profesor de POST y GET para Accounts
+
+POST  Inserta cuenta de Cliente
+http://localhost:8080/account_bank
+{"NoCuenta" : "CTA001" , "Saldo" : "100.00", "FechUltiTran" : "2018-06-11T20:38:30", "idCliente" : "CLI002"}
+
+GET   Muestra todas las cuentas de un cliente
+http://localhost:8080/account_bank/CLI002
+
+GET   Muestra todas las cuentas de todos los clientes
+http://localhost:8080/account_bank/*
+
+
+Añadí el hystrix para el caso de error al llamar al ElasticSearch.
+En ese caso debe dar los siguientes mensajes con estatus 408 Request Time Out:
+
+{"Error":"Sin Respuesta a POST de Elastic Search. Respuesta automática de Circuit Braker"}
+{"Error":"Sin Respuesta a GET  de Elastic Search. Respuesta automática de Circuit Braker"}

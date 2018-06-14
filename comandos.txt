@@ -1,0 +1,11 @@
+$ http :8080/v1/customer id=123 name=RONald email=ronald@gmail.com -v
+$ http :9090/customer/v1/customer id=123 name=RONald email=ronald@gmail.com -v
+$ http :8081/v1/product id=123 name=RonaldRamos description=CUalquierCOsa -v
+$ http :9090/account/v1/product id=123 name=RonaldRamos description=CUalquierCOsa -v
+
+$ http :9200/_search  -> visualizar contenido de elasticsearch desde Shell
+
+
+http://localhost:15672 -> ruta del rabbitmq server
+http://localhost:8761  -> ruta del eureka 
+
