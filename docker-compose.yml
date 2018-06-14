@@ -30,7 +30,7 @@ services:
     restart: always
 
   customerbank:
-    image: mrodriguezmgm01/customer_bank:0.0.1
+    image: mrodriguezmgm01/customer_bank:0.0.3
     environment:
       - SPRING_RABBITMQ_HOST=rabbitmq
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/

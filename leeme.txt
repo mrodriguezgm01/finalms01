@@ -1,0 +1,28 @@
+1) en un mismo directorio copiar los archivos
+docker-compose.yml
+compose.sh
+
+2) ejecutar archivo
+$/bin/sh compose.sh
+
+3)al culminar todo los servicios YA estan activos
+pueden ingresar y probar con postman.
+
+4) antes de ejecutar el archivo debe tener el docker y docker-compose instalado
+5) verifique los puestos deben estar libres
+   netstat -nltp
+6) si falla la descarga o no liberaron los puertos antes de ejecutar el archivo
+   deben dar:
+   docker ps -a muestra todo los contenedores, debe quedar vacio
+   docker stop idcont1 idcont2 ...detener servicio
+   docker rm idcont1 idcont2 ... borramos conten
+
+7) docker images -> muestra lista de imagenes
+   docker rmi idcont1 idcont2 ... Borra imagenes del equipo.
+
+8) https://hub.docker.com/u/mrodriguezmgm01/
+9) ultima version https://github.com/mrodriguezgm01/finalms01.git
+   branch features/pase05
+
+10) http://104.198.44.71:9090/account/account_bank
+    http://104.198.44.71:9090/customer/customer_bank

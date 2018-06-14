@@ -17,7 +17,7 @@ services:
     restart: always
 
   accountbank:
-    image: mrodriguezmgm01/account_bank:0.0.1
+    image: mrodriguezmgm01/account_bank:0.0.2
     environment:
       - SPRING_DATA_ELASTICSEARCH_CLUSTER-NODES=elasticsearch:9300
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
@@ -30,7 +30,7 @@ services:
     restart: always
 
   customerbank:
-    image: mrodriguezmgm01/customer_bank:0.0.1
+    image: mrodriguezmgm01/customer_bank:0.0.3
     environment:
       - SPRING_RABBITMQ_HOST=rabbitmq
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
