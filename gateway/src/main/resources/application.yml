@@ -1,0 +1,24 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+zuul:
+  #prefix: /api
+  routes:
+    product:
+      path: /account/**
+      #serviceId es el identificador del servicio en Eureka
+      serviceId: ACCOUNT_BANK
+      retryable: true
+    customer:
+      path: /customer/**
+      serviceId: CUSTOMER_BANK
+      retryable: true
+
+spring:
+  application:
+    name: zuul-server
+
+server.port: 8080
+management.security.enabled: false

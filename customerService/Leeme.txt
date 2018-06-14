@@ -1,0 +1,16 @@
+POST
+http://localhost:8080/customer_bank
+ { "id" : "123" , "name" : "RONald" , "email" : "ronald@gmail.com" }
+
+
+La respuesta OK, retorna el mismo mensaje que se puso y luego se jaló de la cola, con estatus 200 ok.
+
+{
+    "id": "123",
+    "name": "RONald",
+    "email": "ronald@gmail.com"
+}
+
+La respuesta Error, retorna un mensaje de error y con estatus 408 Request Timeout.
+
+{"Error":"Sin Respuesta de la cola. Respuesta automática de Circuit Braker"}
