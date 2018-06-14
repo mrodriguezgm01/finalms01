@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.cacti.workshop.microservices.CustomerServiceApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-06-14T06:27:40" hostname="pc-PC" time="0.043">
+  <properties/>
+  <testcase name="contextLoads" classname="com.cacti.workshop.microservices.CustomerServiceApplicationTests" time="0.043"/>
+  <system-out><![CDATA[
+
+  @@@@@@@@@@@@@@@@@@@@@888888888#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@888&&&&&&&&&&&888@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@88&&&&&&&&&&&&&&&&&888@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@88&&&&&&&&&&&&&&&&&&&&&88#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@88&&&&&&&&&&&&&&&&&&&&&&&88@@@@@@@@&oooooo#@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@88&&&&&&&&&&&&&&&&&&&&&&&&&&8@@8ooo*********oooo@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@8&&&&&&&&&&&&&&&&&&&&&&&&&&&8oo:*********:::***:oo#@@@@@@@@@@@@@@
+  @@@@@@@@@@#8&&&&&&&&&&&&&&&&&&&&&&&&&ooo:*************:::::**oo@@@@@@@@@@@@@
+  @@@@@@@@@@@8&&&&&&&&&&&&&&&&&&&&&&&&&oo****************:::::**oo@@@@@@@@@@@@
+  @@@@@@@@@@@88&&&&&&&&&&&&&&&&&&&&&&&oo*******......*****:::::**oo@@@@@@@@@@@
+  @@@@@@@@@@@@88&&&&&&&&&&&&&&&&&&&&&&o:******.......*****::::::**oo@@@@@@@@@@
+  @@@@@@@@@@@@#88&&&&&&&&&&&&&&&&&&&&oo**:*****.....******::::::**oo@@@@@@@@@@
+  @@@@@@@@@@@@##88&&&&&&&&&&&&&&&&&&&&o**::**************:::::::**oo@@@@@@@@@@
+  @@@@@@@@@@##&oo&888&&&&&&&&&&&&&&888o:**::***********:::::::::**o&@@@@@@@@@@
+  @@@@@@@@##ooo&&&&&888888&&&888888o&&oo:*:::::::**::::::::::::**oo@@@@@@@@@@@
+  @@@@@@##&oo&&&&&&&&&:::&&&&&&o:::&&&&oo:**::::::::::::::::::**oo@@@@@@@@@@@@
+  @@@@@##oo888&&&&&&&&&:&&&&&&&&::&&&&&88oo**:::::::::::::::**:oo@@@@@@@@@@@@@
+  @@@@##oo888888&&&&&&&&&&&&&&&&&&&&&##8ooooo****::::::::***oooo8##@@@@@@@@@@@
+  @@@@#&o8888888888&&&&&&&&&&&&&&&&##&oo&&&::oooo:******ooooo::8oo&##@@@@@@@@@
+  @@@##oo8888888888888888888888888#8oo&&&&&o:::&  .:::*  &&:::8888&o&##@@@@@@@
+  @@@##o&888888888888888888888888#oo&&&&&&&&::&&&        &&o:&888888oo##@@@@@@
+  @@@##o&88888888888888888888888#oo88&&&&&&&&&&&&&      &&&8888888888oo##@@@@@
+  @@@@#&o8888888888888888888888#&o8888&&&&&&&&&&&&     :&8888888888888&&##@@@@
+  @@@@##&&88888888888888888888##o&8888888&&&&&&&&&&....88888888888##888&&#@@@@
+  @@@@@##8&&888888888888888888##o888888888888888888...*888888888888#888&&##@@@
+  @@@@@@@##8oooooooooooooooooo##o&888888888888888888..88888888888888#88&&##@@@
+  @@@@@@@@@@####################oo888888888888888888..88888888888888#88&&##@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@##&&88888888888888888&&88888888888888##&&8#@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##&&8888888888888888888888888888888888&8#@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##&&&&&88888888888888888888888&&&&&###@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#######8888888888888888888#######@@@@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+01:27:38     ERROR o.s.a.r.l.SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:62)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:368)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:573)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:1430)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1411)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1387)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:336)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.redeclareElementsIfNecessary(SimpleMessageListenerContainer.java:1171)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1422)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:50)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:907)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:859)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:799)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:352)
+	... 8 common frames omitted
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

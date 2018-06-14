@@ -48,7 +48,7 @@ public class CustomerController {
 	}
 	  
 	public HttpEntity fallback(Customer customer) {
-    	return new ResponseEntity( "{\"Error\":\"Sin Respuesta de la cola. Respuesta automática de Circuit Braker\"}", HttpStatus.REQUEST_TIMEOUT);
+    	return new ResponseEntity( "{\"Error\":\"Sin Respuesta de la cola. Respuesta automtica de Circuit Braker\"}", HttpStatus.REQUEST_TIMEOUT);
 	  }
 
 }
